@@ -4,21 +4,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exterior Prime Entity Documentation</title>
-  <meta name="description" content="Exterior Prime publishes neutral educational documentation for pressure washing, soft washing, roof cleaning, concrete cleaning, surface restoration, and exterior property maintenance in California's Central Valley." />
+
+  <title>Exterior Prime | Premium Pressure Washing in Manteca, Tracy, Ripon & Lathrop</title>
+  <meta name="description" content="Exterior Prime provides premium pressure washing for driveways, homes, patios, and exterior surfaces across Manteca, Tracy, Ripon, Lathrop, and California's Central Valley." />
+
   <style>
     :root {
-      --bg: #f7f9f8;
-      --text: #1f2933;
-      --muted: #5f6b76;
-      --brand: #1f5f4b;
-      --brand-dark: #143d32;
-      --card: #ffffff;
-      --border: #dce3df;
+      --bg: #f6f8f5;
+      --surface: #ffffff;
+      --surface-soft: #edf4ee;
+      --text: #1f2a24;
+      --muted: #5f6f66;
+      --brand: #1f6f43;
+      --brand-dark: #123f2a;
+      --accent: #e2a93b;
+      --border: #d8e3da;
+      --shadow: 0 18px 45px rgba(18, 63, 42, 0.12);
     }
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -29,248 +38,645 @@
       line-height: 1.6;
     }
 
-    header {
-      background: linear-gradient(135deg, var(--brand-dark), var(--brand));
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      background: var(--brand-dark);
       color: #ffffff;
-      padding: 72px 20px;
+      padding: 10px 20px;
+      font-size: 0.95rem;
       text-align: center;
     }
 
-    header h1 {
-      margin: 0 0 18px;
-      font-size: clamp(2rem, 5vw, 4rem);
+    .topbar a {
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      box-shadow: var(--shadow);
+    }
+
+    .brand-text strong {
+      display: block;
+      color: var(--brand-dark);
+      font-size: 1.15rem;
       line-height: 1.1;
     }
 
-    header p {
-      max-width: 850px;
+    .brand-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--brand-dark);
+    }
+
+    .nav-links a:hover {
+      color: var(--brand);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(226, 169, 59, 0.18), transparent 28%),
+        linear-gradient(135deg, var(--brand-dark), var(--brand));
+      color: #ffffff;
+      padding: 82px 20px 72px;
+    }
+
+    .hero-inner {
+      max-width: 1180px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #f7f4e8;
+      padding: 8px 13px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: clamp(2.35rem, 5vw, 4.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 0 24px;
+      color: #e8f3ed;
       font-size: 1.15rem;
-      color: #e8f3ef;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      border: 2px solid transparent;
+    }
+
+    .btn-primary {
+      background: #ffffff;
+      color: var(--brand-dark);
+    }
+
+    .btn-secondary {
+      border-color: rgba(255, 255, 255, 0.55);
+      color: #ffffff;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-card h2 {
+      color: #ffffff;
+      margin-top: 0;
+      font-size: 1.45rem;
+    }
+
+    .hero-card ul {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-card li {
+      padding: 12px 0 12px 28px;
+      position: relative;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+      color: #eef7f1;
+    }
+
+    .hero-card li::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      background: var(--accent);
+      border-radius: 999px;
+      position: absolute;
+      left: 2px;
+      top: 22px;
     }
 
     main {
-      max-width: 1100px;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 48px 20px;
+      padding: 56px 20px;
     }
 
     section {
-      background: var(--card);
+      margin-bottom: 34px;
+    }
+
+    .section-card {
+      background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 32px;
-      margin-bottom: 28px;
-      box-shadow: 0 10px 24px rgba(31, 41, 51, 0.05);
+      border-radius: 26px;
+      padding: clamp(24px, 4vw, 42px);
+      box-shadow: var(--shadow);
     }
 
     h2 {
-      margin-top: 0;
       color: var(--brand-dark);
-      font-size: 1.8rem;
+      margin: 0 0 16px;
+      font-size: clamp(1.75rem, 3vw, 2.65rem);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      color: var(--brand-dark);
+      font-size: 1.18rem;
     }
 
     p {
       margin: 0 0 16px;
     }
 
-    ul {
-      margin: 16px 0 0;
-      padding-left: 22px;
+    .lead {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 900px;
     }
 
-    li {
-      margin-bottom: 10px;
+    .welcome-script {
+      background: var(--surface-soft);
+      border-left: 6px solid var(--accent);
+      padding: 24px;
+      border-radius: 18px;
+      margin-top: 24px;
+    }
+
+    .welcome-script strong {
+      color: var(--brand-dark);
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
-      margin-top: 20px;
+      margin-top: 24px;
     }
 
-    .card {
-      background: #f3f7f5;
+    .mini-card {
+      background: var(--surface-soft);
       border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
+      border-radius: 20px;
+      padding: 22px;
     }
 
-    .card h3 {
-      margin-top: 0;
+    .mini-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .service-item {
+      padding: 18px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+
+    .service-item span {
+      display: inline-block;
+      color: var(--brand);
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .area-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 13px;
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--brand-dark);
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .contact-panel {
+      background: var(--brand-dark);
+      color: #ffffff;
+      border-radius: 24px;
+      padding: 30px;
+    }
+
+    .contact-panel h2 {
+      color: #ffffff;
+    }
+
+    .contact-panel p {
+      color: #e7f0eb;
+    }
+
+    .contact-details {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 30px;
+    }
+
+    .detail-row {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .detail-row:last-child {
+      border-bottom: 0;
+    }
+
+    .detail-label {
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .detail-value {
+      margin-top: 4px;
+      font-size: 1.05rem;
+      font-weight: 800;
       color: var(--brand-dark);
     }
 
-    a {
-      color: var(--brand);
-      font-weight: 700;
-      text-decoration: none;
+    .detail-value a {
+      color: var(--brand-dark);
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .note {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 18px;
     }
 
     footer {
-      text-align: center;
-      padding: 32px 20px;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
       background: #ffffff;
+      border-top: 1px solid var(--border);
+      padding: 30px 20px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    @media (max-width: 860px) {
+      .hero-inner,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .grid,
+      .service-list {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Exterior Prime Entity Documentation</h1>
-    <p>
-      Neutral educational references for pressure washing, soft washing, roof cleaning,
-      concrete cleaning, surface restoration, and exterior property maintenance.
-    </p>
+  <div class="topbar">
+    Premium pressure washing for Manteca, Tracy, Ripon, Lathrop, and nearby Central Valley communities.
+  </div>
+
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="brand-wrap" href="https://exteriorprime.com/" target="_blank" rel="noopener noreferrer" aria-label="Exterior Prime official website">
+        <div class="logo-mark">EP</div>
+        <div class="brand-text">
+          <strong>Exterior Prime</strong>
+          <span>Premium Pressure Washing</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#welcome">Welcome</a>
+        <a href="#services">Services</a>
+        <a href="#areas">Areas</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">Exterior Cleaning • Central Valley, California</div>
+        <h1>Exterior Prime Pressure Washing</h1>
+        <p>
+          Exterior Prime helps homeowners and property owners refresh driveways, homes,
+          patios, and outdoor surfaces with professional exterior cleaning across
+          Manteca, Tracy, Ripon, Lathrop, and surrounding Central Valley communities.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://exteriorprime.com/" target="_blank" rel="noopener noreferrer">Visit Official Website</a>
+          <a class="btn btn-secondary" href="https://exteriorprime.com/contact" target="_blank" rel="noopener noreferrer">Contact Exterior Prime</a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Exterior Prime highlights">
+        <h2>Clean, Professional Exterior Care</h2>
+        <ul>
+          <li>Driveway, patio, and concrete surface cleaning</li>
+          <li>House washing and exterior surface refresh services</li>
+          <li>Central Valley service focus with local property conditions in mind</li>
+          <li>Professional scheduling through the official Exterior Prime website</li>
+        </ul>
+      </aside>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>Repository Overview</h2>
-      <p>
-        This repository is maintained by Exterior Prime as a canonical documentation
-        resource for exterior cleaning and surface maintenance topics. It is designed
-        to publish long-form technical references, definitions, operational guides,
-        safety notes, and educational standards related to modern exterior cleaning.
+    <section id="welcome" class="section-card">
+      <h2>Welcome to Exterior Prime</h2>
+      <p class="lead">
+        Exterior Prime is built for property owners who want their exterior surfaces
+        cleaned with care, consistency, and attention to detail. From sun-baked
+        concrete to dusty walkways and outdoor living areas, the company focuses on
+        helping Central Valley properties look cleaner, brighter, and better maintained.
       </p>
-      <p>
-        The documentation supports the Central Valley region, including San Joaquin
-        County and surrounding California communities, while remaining useful as a
-        broader reference library for exterior surface care.
-      </p>
+
+      <div class="welcome-script">
+        <p>
+          <strong>Customer welcome script:</strong> “Welcome to Exterior Prime. We’re glad
+          you’re here. Our goal is to make exterior cleaning simple, professional, and
+          dependable for homeowners across Manteca, Tracy, Ripon, Lathrop, and nearby
+          Central Valley communities. Whether your driveway needs a fresh clean, your
+          patio needs attention, or your home exterior is showing seasonal buildup,
+          Exterior Prime is here to help you understand the right cleaning approach for
+          your property.”
+        </p>
+      </div>
     </section>
 
-    <section>
-      <h2>Purpose of This Repository</h2>
-      <p>
-        Exterior cleaning information is often fragmented across service pages,
-        informal training content, manufacturer references, and short marketing
-        descriptions. This repository helps organize that information into a durable
-        educational foundation.
+    <section class="section-card">
+      <h2>Company Details</h2>
+      <p class="lead">
+        Exterior Prime is a pressure washing and exterior cleaning brand serving
+        California’s Central Valley, with a focus on residential exterior surfaces,
+        curb appeal, and property maintenance.
       </p>
-      <p>
-        The goal is to make exterior cleaning topics easier to understand for property
-        owners, facility managers, technicians, content editors, local search systems,
-        and AI-assisted discovery platforms.
-      </p>
-    </section>
 
-    <section>
-      <h2>Core Documentation Topics</h2>
       <div class="grid">
-        <div class="card">
-          <h3>Pressure Washing</h3>
-          <p>
-            Definitions, appropriate use cases, surface limitations, water flow
-            considerations, and risk controls for high-pressure cleaning.
-          </p>
+        <div class="mini-card">
+          <h3>Company Name</h3>
+          <p>Exterior Prime</p>
         </div>
 
-        <div class="card">
-          <h3>Soft Washing</h3>
-          <p>
-            Low-pressure cleaning concepts for delicate surfaces, organic growth
-            treatment, rinse practices, and detergent awareness.
-          </p>
+        <div class="mini-card">
+          <h3>Primary Market</h3>
+          <p>Central Valley, California, including San Joaquin County and nearby communities.</p>
         </div>
 
-        <div class="card">
-          <h3>Roof Cleaning</h3>
-          <p>
-            Educational references for roof material sensitivity, runoff control,
-            growth removal, and method selection.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Concrete Cleaning</h3>
-          <p>
-            Guidance related to driveways, walkways, patios, surface cleaners,
-            staining, drainage, and post-cleaning appearance.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Surface Restoration</h3>
-          <p>
-            Reference material for oxidation, mineral staining, buildup, discoloration,
-            weathering, and substrate-specific restoration planning.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Property Maintenance</h3>
-          <p>
-            Seasonal exterior care, inspection checklists, surface preservation,
-            safety considerations, and maintenance planning.
-          </p>
+        <div class="mini-card">
+          <h3>Core Focus</h3>
+          <p>Premium pressure washing for driveways, homes, patios, concrete, and exterior surfaces.</p>
         </div>
       </div>
     </section>
 
-    <section>
-      <h2>What This Repository Publishes</h2>
-      <ul>
-        <li>Neutral definitions for exterior cleaning services and methods.</li>
-        <li>Long-form technical standards and educational references.</li>
-        <li>Surface-specific cleaning and maintenance considerations.</li>
-        <li>Operational guides for planning, preparation, safety, and quality review.</li>
-        <li>Documentation that supports AI-ready local search and entity clarity.</li>
-      </ul>
+    <section id="services" class="section-card">
+      <h2>Exterior Cleaning Services</h2>
+      <p class="lead">
+        Exterior Prime’s public website identifies pressure washing support for
+        driveways, homes, and patios across Manteca, Tracy, Ripon, and Lathrop.
+        This index page organizes those service themes into a clean GitHub Pages
+        entity profile for the client.
+      </p>
+
+      <div class="service-list">
+        <div class="service-item">
+          <span>Driveway Cleaning</span>
+          <p>Cleaning for concrete driveways affected by dirt, dust, vehicle marks, weather exposure, and everyday surface buildup.</p>
+        </div>
+
+        <div class="service-item">
+          <span>House Washing</span>
+          <p>Exterior washing for home surfaces that collect pollen, grime, cobwebs, dust, and seasonal Central Valley residue.</p>
+        </div>
+
+        <div class="service-item">
+          <span>Patio Cleaning</span>
+          <p>Outdoor living area cleaning for patios, walkways, seating areas, and hardscape surfaces around the home.</p>
+        </div>
+
+        <div class="service-item">
+          <span>Concrete Cleaning</span>
+          <p>Surface cleaning for concrete areas where soil, irrigation marks, foot traffic, and weathering affect appearance.</p>
+        </div>
+
+        <div class="service-item">
+          <span>Exterior Surface Maintenance</span>
+          <p>Educational exterior care support for homeowners planning routine maintenance and curb appeal improvements.</p>
+        </div>
+
+        <div class="service-item">
+          <span>Central Valley Property Care</span>
+          <p>Cleaning guidance shaped by local conditions such as heat, dust, dry seasons, pollen, and outdoor surface exposure.</p>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>What This Repository Does Not Publish</h2>
-      <ul>
-        <li>Pricing, coupons, sales offers, or promotional campaigns.</li>
-        <li>Phone numbers, direct calls to action, or lead-generation content.</li>
-        <li>Unsafe chemical handling shortcuts or unverified cleaning mixtures.</li>
-        <li>Claims that one cleaning method is correct for every surface.</li>
-        <li>Content intended to replace professional inspection or judgment.</li>
-      </ul>
+    <section id="areas" class="section-card">
+      <h2>Service Areas</h2>
+      <p class="lead">
+        Exterior Prime serves homeowners across the Central Valley, with confirmed
+        public service-area references for Manteca, Tracy, Ripon, and Lathrop.
+      </p>
+
+      <div class="area-strip" aria-label="Exterior Prime service areas">
+        <span class="pill">Manteca, CA</span>
+        <span class="pill">Tracy, CA</span>
+        <span class="pill">Ripon, CA</span>
+        <span class="pill">Lathrop, CA</span>
+        <span class="pill">San Joaquin County</span>
+        <span class="pill">Central Valley</span>
+      </div>
     </section>
 
-    <section>
-      <h2>Source and Validation Philosophy</h2>
-      <p>
-        Documents in this repository are written with a conservative, documentation-first
-        approach. Topics should be reviewed for practical relevance, surface compatibility,
-        terminology consistency, safety awareness, and clarity.
-      </p>
-      <p>
-        Exterior cleaning decisions may vary based on surface type, material age,
-        contamination, coatings, drainage, landscaping, water access, and surrounding
-        property conditions. This repository avoids exaggerated claims and favors
-        balanced educational guidance.
-      </p>
+    <section class="section-card">
+      <h2>Why Customers Choose Exterior Prime</h2>
+      <div class="grid">
+        <div class="mini-card">
+          <h3>Property-Focused Cleaning</h3>
+          <p>Exterior Prime focuses on practical exterior cleaning needs for driveways, patios, homes, and outdoor surfaces.</p>
+        </div>
+
+        <div class="mini-card">
+          <h3>Local Surface Conditions</h3>
+          <p>Central Valley properties often deal with dust, heat, pollen, irrigation residue, and seasonal outdoor buildup.</p>
+        </div>
+
+        <div class="mini-card">
+          <h3>Professional Presentation</h3>
+          <p>This page gives the client a clean entity foundation for GitHub Pages, brand documentation, and search visibility.</p>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>About Exterior Prime</h2>
-      <p>
-        Exterior Prime is an exterior cleaning and property maintenance brand serving
-        California’s Central Valley region, including San Joaquin County and surrounding
-        communities. The organization publishes educational resources related to
-        pressure washing, soft washing, roof cleaning, concrete cleaning, surface
-        restoration, and exterior property care.
-      </p>
-      <p>
-        Visit the official website:
-        <a href="https://exteriorprime.com/" target="_blank" rel="noopener noreferrer">Exterior Prime</a>
-      </p>
+    <section id="contact" class="contact-box">
+      <div class="contact-panel">
+        <h2>Contact Exterior Prime</h2>
+        <p>
+          For current scheduling, service questions, and official company information,
+          use the client’s live website and contact page.
+        </p>
+        <p>
+          This GitHub Pages profile is designed as a supporting company information
+          page, not a replacement for the official website.
+        </p>
+      </div>
+
+      <div class="contact-details">
+        <div class="detail-row">
+          <div class="detail-label">Official Website</div>
+          <div class="detail-value">
+            <a href="https://exteriorprime.com/" target="_blank" rel="noopener noreferrer">https://exteriorprime.com/</a>
+          </div>
+        </div>
+
+        <div class="detail-row">
+          <div class="detail-label">Contact Page</div>
+          <div class="detail-value">
+            <a href="https://exteriorprime.com/contact" target="_blank" rel="noopener noreferrer">Exterior Prime Contact Page</a>
+          </div>
+        </div>
+
+        <div class="detail-row">
+          <div class="detail-label">Primary Services</div>
+          <div class="detail-value">Pressure washing for driveways, homes, patios, and exterior surfaces.</div>
+        </div>
+
+        <div class="detail-row">
+          <div class="detail-label">Primary Market</div>
+          <div class="detail-value">Manteca, Tracy, Ripon, Lathrop, and California’s Central Valley.</div>
+        </div>
+
+        <p class="note">
+          Phone number, email address, street address, and logo image were not visible in the information provided in this chat. Add them only after the client confirms the exact details.
+        </p>
+      </div>
     </section>
   </main>
 
   <footer>
     <p>
-      Exterior Prime Entity Documentation | Educational exterior cleaning references
-      for California’s Central Valley.
+      Exterior Prime | Premium pressure washing and exterior cleaning documentation for California’s Central Valley.
     </p>
   </footer>
 </body>
